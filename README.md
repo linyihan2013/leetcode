@@ -1,5 +1,5 @@
 #leetcode
-leetcode solutons [python, java, bash]
+leetcode solutons [python, java, bash]  
 total 273 algorithm problems.
 
 #progress
