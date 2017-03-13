@@ -1,7 +1,6 @@
 __author__ = 'yihan'
-import NumberofDigitOne
+import PaintFence
 
 if __name__ == '__main__':
-    test = 111
-    solution = NumberofDigitOne.Solution()
-    print(solution.countDigitOne(test))
+    solution = PaintFence.Solution()
+    print(solution.numWays(2, 1))

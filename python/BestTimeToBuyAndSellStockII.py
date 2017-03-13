@@ -5,16 +5,10 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
-        len1 = len(prices)
-        if len1 <= 1:
-            return 0
-        i = 0
-        res = 0
-        while i < len1:
-            while i < len1 - 1 and prices[i] > prices[i + 1]: i += 1
-            start = i
-            i += 1
-            while i < len1 and prices[i] > prices[i - 1]: i += 1
-            end = i - 1
-            res += prices[end] - prices[start]
-        return res
+        buy, pre_buy, sell, pre_sell = -0x7fffffff, 0, 0, 0
+        for price in prices:
+            pre_buy = buy
+            buy = max(pre_sell - price, pre_buy)
+            pre_sell = sell
+            sell = max(pre_buy + price, pre_sell)
+        return sell
